@@ -39,13 +39,27 @@
     margin: 20px 0px;
     background-color: gray;
 }
+@media screen and (max-width: 1000px){
+    .footer-content{
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .logo{
+        width: 300px;
+    }
+    
+}
 @media (max-width:750px){
     .footer-content{
         display: flex;
         flex-direction: column;
         gap: 35px;
     }
+    .
     .footer-copyright{
         text-align: center;
+    }
+    .logo{
+        width: 200px;
     }
 }

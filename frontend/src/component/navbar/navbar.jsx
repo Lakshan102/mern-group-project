@@ -4,7 +4,7 @@ import {assets} from '../../assets/assets'
 import { Link, useNavigate } from 'react-router-dom'
 import { StoreContext } from '../../context/storeContext'
 
-function navbar({setShowLogin}) {
+function Navbar({setShowLogin}) {
 
   const [menu,setMenu] = useState("Home")
   const {getTotalCartAmount,token,setToken} = useContext(StoreContext)
@@ -21,11 +21,9 @@ function navbar({setShowLogin}) {
       <ul className="navbarMenu">
         <Link to='/' onClick={()=>setMenu("Home")} className={menu === "Home"? "active":""}>Home</Link>
         <a href='#exploreMenu' onClick={()=>setMenu("Menu")} className={menu === "Menu"? "active":""}>Menu</a>
-        <a href='#app-download' onClick={()=>setMenu("MobileApp")} className={menu === "MobileApp"? "active":""}>MobileApp</a>
-        <a href='#footer' onClick={()=>setMenu("ContactUs")} className={menu === "ContactUs"? "active":""}>Cotact Us</a>
+        <a href='#footer' onClick={()=>setMenu("ContactUs")} className={menu === "ContactUs"? "active":""}>Reach Out</a>
       </ul>
       <div className="navbar-right">
-        <img src={assets.search_icon} alt="" />
         <div className="navbar-searchicon">
           <Link to='/cart'><img src={assets.basket_icon} alt="" /></Link>
           
@@ -33,9 +31,11 @@ function navbar({setShowLogin}) {
         </div>
         {!token?<button onClick={()=>setShowLogin(true)}>sign in</button>
         :<div className='navbar-profile'>
-          <img src={assets.profile_icon} alt="" />
+          <img className='profile' src={assets.profile_icon} alt="" />
           <ul className='navbar-profile-dropdown'>
             <li onClick={()=>navigate('/myorders')}><img src={assets.bag_icon} alt="" /><p>Orders</p></li>
+            <hr />
+             <li onClick={()=>navigate('/profiles')}> <img src={assets.bag_icon} alt="" /><p>Profile</p></li>
             <hr />
             <li onClick={logout}><img src={assets.logout_icon} alt="" /><p>Logout</p></li>
           </ul>
@@ -47,4 +47,4 @@ function navbar({setShowLogin}) {
   )
 }
 
-export default navbar
+export default Navbar

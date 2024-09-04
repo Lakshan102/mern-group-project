@@ -22,15 +22,13 @@
     font-size: 20px;
     font-weight: 500;
 }
-.food-item-name-rating img{
-    width: 70px;
-}
+
 .food-item-description{
     color: #676767;
     font-size: 12px;
 }
 .food-item-price{
-    color: tomato;
+    color:#fadb2b ;
     font-size: 22px;
     font-weight: 500;
     margin: 10px 0px;
@@ -59,4 +57,58 @@
 }
 .food-item-counter img{
     width: 30px;
+}
+
+@media (max-width: 900px){
+    .food-item{
+        width: 90%;
+    }
+    .food-item-info{
+        padding: 10px;
+    }
+    .food-item-name-rating p{
+        font-size: 18px;
+    }
+    .food-item-description{
+        font-size: 10px;
+    }
+    .food-item-price{
+        font-size: 20px;
+    }
+    .food-item-img-container .add{
+        width: 10px;
+    }
+    .food-item-counter img{
+        width: 25px;
+    }
+    .food-item-img{
+        width: 70%;
+    }
+}
+@media (max-width: 600px){
+    .food-item{
+        width: 90%;
+    }
+    .food-item-info{
+        padding: 10px;
+    }
+    .food-item-name-rating p{
+        font-size: 16px;
+    }
+    .food-item-description{
+        font-size: 10px;
+    }
+    .food-item-price{
+        font-size: 18px;
+    }
+    .food-item-img-container .add{
+        width: 10px;
+    }
+    .food-item-counter img{
+        width: 20px;
+    }
+    .food-item-img{
+        width: 50%;
+    }
+    
 }

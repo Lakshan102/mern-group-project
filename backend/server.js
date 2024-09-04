@@ -6,6 +6,8 @@ import userRouter from "./routes/userRoute.js"
 import 'dotenv/config.js'
 import cartRouter from "./routes/cartRoute.js"
 import orderRouter from "./routes/orderRoute.js"
+import chefRouter from "./routes/chefRoute.js"
+import ingredientRouter from "./routes/ingredientRoute.js"
 
 
 
@@ -22,10 +24,13 @@ connectDB();
 
 // api endpoints
 app.use("/api/food",foodRouter);
+app.use("/api/ingredient",ingredientRouter)
 app.use("/images",express.static('uploads'))
 app.use("/api/user",userRouter)
 app.use("/api/cart",cartRouter)
 app.use("/api/order",orderRouter)
+app.use("/api/chef",chefRouter)
+
 
 app.get("/", (req, res) => {
     res.send("API Working");

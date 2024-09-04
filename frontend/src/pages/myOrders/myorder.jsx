@@ -4,7 +4,7 @@ import { StoreContext } from '../../context/storeContext'
 import axios from 'axios';
 import { assets } from '../../assets/assets';
 
-function myorder() {
+function Myorder() {
 
     const {url,token} = useContext(StoreContext);
     const [data,setData] = useState([]);
@@ -47,4 +47,4 @@ function myorder() {
   )
 }
 
-export default myorder
+export default Myorder

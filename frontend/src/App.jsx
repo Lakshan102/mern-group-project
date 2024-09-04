@@ -6,8 +6,10 @@ import PlaceOrder from './pages/placeOrder/placeOrder'
 import Home from './pages/Home/home'
 import Footer from './component/footer/footer'
 import LoginPopup from './component/loginPopup/loginPopup'
-import Verify from './pages/verify/verify'
+// import Verify from './pages/verify/verify'
 import Myorders from './pages/myOrders/myorder'
+import Profiles from './pages/profiles/profile'
+import Update from './pages/profiles/update'
 
 function App() {
   const [showLogin,setShowLogin] = useState(false)
@@ -22,8 +24,10 @@ function App() {
           <Route path='/' element={<Home/>} />
           <Route path='/cart' element={<Cart/>} />
           <Route path='/order' element={<PlaceOrder/>} />
-          <Route path='/verify' element={<Verify/>}/>
+          {/* <Route path='/verify' element={<Verify/>}/> */}
           <Route path='/myorders' element={<Myorders/>}/>
+          <Route path='/profiles' element={<Profiles />} />
+          <Route path='/update' element={<Update />} />
         </Routes>
       </div>
       <Footer/>

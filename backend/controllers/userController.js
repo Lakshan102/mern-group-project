@@ -2,6 +2,7 @@ import userModel from "../models/userModel.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt"
 import validator from "validator"
+import orderModel from "../models/orderModel.js";
 
 
 //login user
@@ -68,7 +69,76 @@ const registerUser = async (req,res)=>{
         res.json({success:false,message:"Error"})
     }
     
-
 }
 
-export {loginUser,registerUser}
+// Update student
+const updateprofile =async (req, res) => {
+    const { name,email } = req.body;
+
+    try {
+        const updatedStudent = await userModel.findOneAndUpdate(
+            { email },
+            { name },
+            { new: true }
+        );
+
+        if (updatedStudent) {
+            res.status(200).send({ status: "Update successful", user: updatedStudent });
+        } else {
+            res.status(404).send({ status: "User not found" });
+        }
+    } catch (err) {
+        console.log(err);
+        res.status(500).send({ status: "Error updating user", error: err.message });
+    }
+};
+
+
+// Delete student
+const deleteprofile =(async (req, res) => {
+    const { email } = req.body;
+
+    try {
+        const user = await userModel.findOne({email})
+        if(!user){
+            return res.status(404).send({ status: "User not found" });
+        }
+        await orderModel.deleteMany({userId:user._id})
+        await user.deleteOne();
+        res.status(200).send({ status: "User deleted" });
+    } catch (err) {
+        console.log(err.message);
+        res.status(500).send({ status: "Error deleting user", error: err.message });
+    }
+});
+
+
+
+export {loginUser,registerUser,updateprofile,deleteprofile}
+
+const extractDataFromToken = (token)=>{
+    return jwt.decode(token,process.env.JWT_SECRET)
+}
+
+// get user data by id
+export const getProfileByToken = async (req, res) => {
+    const {token} = req.body;
+    
+    try {
+        const tokenData = extractDataFromToken(token);
+        if(!tokenData){
+            return res.status(400).json({success:false,message:"Invalid Token"})
+        }
+        
+        const data = await userModel.findById(tokenData.id);
+        
+        if(!data){
+            return res.sendStatus(404);
+        }
+        res.status(200).json(data);
+    } catch (err) {
+        console.log(err.message);
+        res.status(500).send({ status: "Error deleting user", error: err.message });
+        
+    }
+}

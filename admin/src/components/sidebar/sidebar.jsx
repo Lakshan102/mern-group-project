@@ -19,6 +19,18 @@ function sidebar() {
             <img src={assets.order_icon} alt="" />
             <p>Orders</p>
         </NavLink>
+        <NavLink to='/new' className="sidebar-option">
+            <img src={assets.order_icon} alt="" />
+            <p>New Foods</p>
+        </NavLink>
+        <NavLink to='/add-ingredients' className="sidebar-option">
+            <img src={assets.add_icon} alt="" />
+            <p>Add Ingredients</p>
+        </NavLink>
+        <NavLink to='/list-ingredients' className="sidebar-option">
+            <img src={assets.order_icon} alt="" />
+            <p>List Ingredients</p>
+        </NavLink>
       </div>
     </div>
   )
