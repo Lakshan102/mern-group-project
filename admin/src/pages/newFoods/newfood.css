@@ -9,6 +9,9 @@
     font-size: 14px;
     color: #505050;
 }
+.order-item img{
+    width:50px;
+}
 .order-item-food, .order-item-name{
     font-weight: 600;
 }

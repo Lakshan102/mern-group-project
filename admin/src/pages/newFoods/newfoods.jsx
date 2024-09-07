@@ -36,7 +36,7 @@ function newfoods({url}) {
         <div className="order-list">
             {foods.map((food,index)=>(
             <div key={index} className="order-item">
-                <img src={assets.parcel_icon} alt="" />
+                <img src={assets.f_parcel_icon} alt="" />
                 <div>
                 <p className="order-item-food">
                     Name: {food.name}
