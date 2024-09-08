@@ -1,11 +1,6 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 .profile-update{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: start;
     height: 100vh;
     background-color: #f1f1f1;
