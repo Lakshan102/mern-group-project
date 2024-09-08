@@ -3,6 +3,7 @@ import './placeOrder.css'
 import { StoreContext } from '../../context/storeContext'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
 
 
 
@@ -48,7 +49,7 @@ function PlaceOrder() {
       window.location.replace(session_url);
     }
     else{
-      alert("Error");
+      toast.error("Error");
     }
    };
    const navigate = useNavigate();

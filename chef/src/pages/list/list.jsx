@@ -53,7 +53,7 @@ function list({url}) {
               <p>{item.name}</p>
               <p>{item.ingredients}</p>
               <p>{item.category}</p>
-              <p>{item.cost}</p>
+              <p>Rs.{item.cost}</p>
               <p className='status'>{item.status}</p>
               <p onClick={()=>removeFood(item._id)} className='cursor'>X</p>
             </div>

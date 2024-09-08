@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import "./listIngredients.css"
 import axios from "axios"
 import {toast} from "react-toastify"
 import {assets} from '../../assets/assets'
 
-function listIngredients({url}) {
+function ListIngredients({url}) {
   
   const [list,setList] = useState([]);
 
@@ -67,7 +67,7 @@ function listIngredients({url}) {
         </div>
         {list.map((item,index)=>{
           return(
-            <div key={index} className="list-table-format">
+            <div key={index} className="list-table-format-in">
               <img className="item_img" src={`${url}/images/` + item.image} alt="" />
               <p>{item.name}</p>
               <p>{item.quantity}</p>
@@ -88,4 +88,4 @@ function listIngredients({url}) {
   )
 }
 
-export default listIngredients
+export default ListIngredients

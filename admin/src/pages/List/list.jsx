@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import "./list.css"
 import axios from "axios"
 import {toast} from "react-toastify"
 
-function list({url}) {
+function List({url}) {
 
   
   const [list,setList] = useState([]);
@@ -50,7 +50,7 @@ function list({url}) {
               <img src={`${url}/images/` + item.image} alt="" />
               <p>{item.name}</p>
               <p>{item.category}</p>
-              <p>{item.price}</p>
+              <p>Rs.{item.price}</p>
               <p onClick={()=>removeFood(item._id)} className='cursor'>X</p>
             </div>
           )
@@ -60,4 +60,4 @@ function list({url}) {
   )
 }
 
-export default list
+export default List

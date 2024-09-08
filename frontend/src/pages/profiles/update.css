@@ -52,12 +52,14 @@
 .profile-update-inner button{
     padding: 10px 20px;
     border: none;
-    background-color: #007bff;
+    background-color: #cabb2d;
     color: #fff;
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
 }
-.profile-update-inner button:hover{
-    background-color: #0056b3;
+.profile-inner button:hover{
+    background-color: #f7f8fa;
+    color: black;
+    border:2px solid #dbb13c;
 }

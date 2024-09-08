@@ -5,7 +5,7 @@ import {toast} from "react-toastify"
 import {assets} from "../../assets/assets"
 
 
-function order({url}) {
+function Order({url}) {
 
   const [orders,setOrders] = useState([]);
 
@@ -59,7 +59,7 @@ function order({url}) {
               <p className="order-item-phone">{order.address.phone}</p>
             </div>
             <p>Items : {order.items.length}</p>
-            <p>${order.amount}</p>
+            <p>Rs.{order.amount}</p>
             <select onChange={(event)=>statusHandler(event,order._id)} value={order.status}>
               <option value="Food Processing">Food Processing</option>
               <option value="Out for delivery">Out for delivery</option>
@@ -72,4 +72,4 @@ function order({url}) {
   )
 }
 
-export default order;
+export default Order;

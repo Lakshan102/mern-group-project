@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import { useContext, useState } from 'react'
 import './navbar.css'
 import {assets} from '../../assets/assets'
 import { Link, useNavigate } from 'react-router-dom'
@@ -35,7 +35,7 @@ function Navbar({setShowLogin}) {
           <ul className='navbar-profile-dropdown'>
             <li onClick={()=>navigate('/myorders')}><img src={assets.bag_icon} alt="" /><p>Orders</p></li>
             <hr />
-             <li onClick={()=>navigate('/profiles')}> <img src={assets.bag_icon} alt="" /><p>Profile</p></li>
+            <li onClick={()=>navigate('/profiles')}><img src={assets.set_profile} alt="" /><p>Profile</p></li>
             <hr />
             <li onClick={logout}><img src={assets.logout_icon} alt="" /><p>Logout</p></li>
           </ul>

@@ -4,7 +4,7 @@ import "./newfood.css"
 import axios from 'axios'
 
 
-function newfoods({url}) {
+function Newfoods({url}) {
 
     const [foods,setFoods] = useState([]);
 
@@ -45,7 +45,7 @@ function newfoods({url}) {
                     Ingredients: {food.ingredients}
                 </p>
                 <p className="order-item-name">
-                    Cost: ${food.cost}
+                    Cost: Rs.{food.cost}
                 </p>
                 <p className="order-item-name">
                     Category: {food.category}
@@ -63,4 +63,4 @@ function newfoods({url}) {
   )
 }
 
-export default newfoods
+export default Newfoods

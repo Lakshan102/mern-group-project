@@ -82,7 +82,7 @@ function add({url}) {
             </div>
             <div className="add-price flex-col">
                 <p>Product cost</p>
-                <input onChange={onChangeHandler} value={data.cost} type="Number" name='cost' placeholder='$20' min='0' />
+                <input onChange={onChangeHandler} value={data.cost} type="Number" name='cost' placeholder='Rs.20' min='0' />
             </div>
         </div>
         <button type='submit' className='add-btn'>Add</button>

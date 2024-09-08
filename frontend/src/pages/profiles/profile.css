@@ -1,27 +1,28 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} */
 .profile{
     display: flex;
-    justify-content: space-between;
-    align-items: start;
-    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: auto;
+    height: max(75vh, 200px);
     background-color: #f1f1f1;
 }
 
 .profile-inner{
     display: flex;
+    justify-content: center;
     flex-direction: column;
     width: 100%;
-    max-width: 900px;
+    max-width: 800px;
     height: 500px;
     border-radius: 5px;
     box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    margin: 100px 150px;
-   
+    margin: 0 auto;
     gap: 30px;
 }
 .profile-inner h2{
@@ -29,14 +30,18 @@
     color: #333;
 }
 .profile-inner button{
-    padding: 10px 20px;
+    padding: 10px 10px;
     border: none;
-    background-color: #007bff;
+
+    width: 100%;
+    background-color: #dbb13c;
     color: #fff;
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
 }
 .profile-inner button:hover{
-    background-color: #0056b3;
+    background-color: #f7f8fa;
+    color: black;
+    border:2px solid #dbb13c;
 }

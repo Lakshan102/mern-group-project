@@ -12,7 +12,7 @@ function sidebar() {
             <p>Add Items</p>
         </NavLink>
         <NavLink to='/list' className="sidebar-option">
-            <img src={assets.order_icon} alt="" />
+            <img src={assets.list} alt="" />
             <p>List Items</p>
         </NavLink>
         <NavLink to='/orders' className="sidebar-option">
@@ -20,7 +20,7 @@ function sidebar() {
             <p>Orders</p>
         </NavLink>
         <NavLink to='/new' className="sidebar-option">
-            <img src={assets.order_icon} alt="" />
+            <img src={assets.new_food} alt="" />
             <p>New Foods</p>
         </NavLink>
         <NavLink to='/add-ingredients' className="sidebar-option">
@@ -28,7 +28,7 @@ function sidebar() {
             <p>Add Ingredients</p>
         </NavLink>
         <NavLink to='/list-ingredients' className="sidebar-option">
-            <img src={assets.order_icon} alt="" />
+            <img src={assets.list} alt="" />
             <p>List Ingredients</p>
         </NavLink>
       </div>

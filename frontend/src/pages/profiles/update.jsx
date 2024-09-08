@@ -1,6 +1,6 @@
-import React, { useContext, useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import "./update.css"
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { StoreContext } from '../../context/storeContext'
 import axios from 'axios'
 import { SERVER_URL } from '../../../globals.js'

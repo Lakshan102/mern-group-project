@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from "axios"
 import { SERVER_URL } from '../../../globals';
 import { StoreContext } from '../../context/storeContext';
+
 const UserProfile = () => {
   const [userData,setUserData] = useState(null)
   const {token,setToken} = useContext(StoreContext)
