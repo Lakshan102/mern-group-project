@@ -3,7 +3,7 @@ import "./list.css"
 import axios from "axios"
 import {toast} from "react-toastify"
 
-function list({url}) {
+function List({url}) {
 
   
   const [list,setList] = useState([]);
@@ -64,4 +64,4 @@ function list({url}) {
   )
 }
 
-export default list
+export default List
