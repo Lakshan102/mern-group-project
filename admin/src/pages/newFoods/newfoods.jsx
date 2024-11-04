@@ -1,4 +1,4 @@
-import React ,{useEffect, useState} from 'react'
+import {useEffect, useState} from 'react'
 import { assets } from '../../assets/assets'
 import "./newfood.css"
 import axios from 'axios'

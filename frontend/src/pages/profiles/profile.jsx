@@ -1,9 +1,10 @@
-import React, { useState, useEffect, useContext } from 'react';
+import { useState, useEffect, useContext, useReducer } from 'react';
 import './profile.css';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from "axios"
 import { SERVER_URL } from '../../../globals';
 import { StoreContext } from '../../context/storeContext';
+import { assets } from '../../assets/assets';
 
 const UserProfile = () => {
   const [userData,setUserData] = useState(null)
@@ -49,19 +50,28 @@ const UserProfile = () => {
                  
   return (
     <>
-      <h1>My Profile</h1>
+    
+      
       <div className='profile'>
         
         <div className='profile-inner'>
-          <h2>Name</h2>
-          <p>{userData.name}</p> {/* Display the name here */}
-          <h2>Email</h2>
-          <p>{userData.email}</p> {/* Display the email here */}
-          
-          <button>
-            <Link to={'/update'}>Update Account</Link>
-          </button>
-          <button onClick={deleteAccount}>Delete Account</button>
+          <div className='profile-left'>
+            <h1>My Profile</h1>
+            <h3>Hi, {userData.name}</h3>
+            <img src={assets.happyfood} alt="" />
+          </div>
+          <div className='profile-right'>
+            <h2>Name</h2>
+            <p>{userData.name}</p> {/* Display the name here */}
+            <h2>Email</h2>
+            <p>{userData.email}</p> {/* Display the email here */}
+            
+            <button>
+              <Link to={'/update'}>Update Account</Link>
+            </button>
+            <button className='delete' onClick={deleteAccount}>Delete Account</button>          
+          </div>
+
         </div>
       </div>
     </>

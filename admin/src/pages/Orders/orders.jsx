@@ -1,4 +1,4 @@
-import React, { useState , useEffect } from 'react'
+import { useState , useEffect } from 'react'
 import "./orders.css"
 import axios from "axios"
 import {toast} from "react-toastify"
@@ -38,7 +38,7 @@ function Order({url}) {
       <div className="order-list">
         {orders.map((order,index)=>(
           <div key={index} className="order-item">
-            <img src={assets.parcel_icon} alt="" />
+            <img src={assets.f_parcel_icon} alt="" />
             <div>
               <p className="order-item-food">
                 {order.items.map((item,index)=>{

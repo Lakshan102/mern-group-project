@@ -64,6 +64,8 @@
     position:relative;
 }
 .navbar-profile .profile{
+    position: relative;
+    top: 0px;
     width: 45px;
     height: 45px;
     border-radius: 50%;

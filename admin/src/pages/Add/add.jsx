@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import{ useState } from 'react'
 import "./add.css"
 import { assets } from '../../assets/assets'
 import axios from "axios"
 import { toast } from 'react-toastify';
 
-function add({url}) {
+function Add({url}) {
 
   
   const [image,setImage] = useState(false);
@@ -90,4 +90,4 @@ function add({url}) {
   )
 }
 
-export default add
+export default Add;

@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { StoreContext } from '../../context/storeContext'
 import axios from 'axios'
 import { SERVER_URL } from '../../../globals.js'
+import { assets } from '../../assets/assets.js'
 
 const Update = () => {
   const [email, setEmail] = useState("")
@@ -51,19 +52,23 @@ const Update = () => {
   return (
     <>
 
-      <h1>Update profile</h1>
+      
       <div className='profile-update'>
-        <form >
-       
-        </form>
         <form onSubmit={handleSubmit} className='profile-update-inner' >
 
-          <h2>Name</h2>
-          <label htmlFor="html">
-            <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Enter new name" />
-          </label>
+          <div className='left'>
+            <h1>Update profile</h1>
+            <img src={assets.happyfood} alt="" />  
+          </div>
 
-          <button type='submit' >Update</button>
+          <div className="right">
+            <h2>Name</h2>
+            <label htmlFor="html">
+              <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Enter new name" />
+            </label>
+
+            <button type='submit' >Update</button>            
+          </div>
         </form>
       </div>
     </>

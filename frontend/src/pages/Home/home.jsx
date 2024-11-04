@@ -4,7 +4,7 @@ import ExploreMenu from '../../component/exploreMenu/exploreMenu'
 import FoodDisplay from '../../component/foodDisplay/foodDisplay';
 import { useState } from 'react';
 import AppDownload from '../../component/AppDownload/appDownload'
-function home() {
+function Home() {
 
   const [category,setCategory] = useState ("All");
 
@@ -18,4 +18,4 @@ function home() {
   )
 }
 
-export default home
+export default Home

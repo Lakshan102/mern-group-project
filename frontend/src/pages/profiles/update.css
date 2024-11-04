@@ -4,6 +4,7 @@
     align-items: start;
     height: 100vh;
     background-color: #f1f1f1;
+  
 }
 .profile-update-outer{
     width: 100%;
@@ -23,7 +24,7 @@
 }
 .profile-update-inner{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
     max-width: 900px;
     height: 500px;
@@ -33,12 +34,44 @@
     margin: 100px 150px;
     gap: 30px;
 }
+.left{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    border-radius: 20px;
+    right:10px;
+    background-color: #f3ca44;
+}
+.left img{
+    width: 50%;
+    height: 50%;
+    border-radius: 20px;
+}
+.right{
+    position: relative;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    border-radius: 20px;
+    left:10px;
+    background-color: #fff;
+    padding: 30px;
+}
 .profile-update-inner h2{
     font-size: 24px;
     color: #333;
 }
 .profile-update-inner input{
     padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 100%;
